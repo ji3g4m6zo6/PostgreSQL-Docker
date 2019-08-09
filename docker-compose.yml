@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  db:
+    image: postgres:10
+    restart: always
+    environment:
+      POSTGRES_USER: $POSTGRES_USER
+      # Password for jia access
+      POSTGRES_PASSWORD: $POSTGRES_PASSWORD
+    ports:
+      - '5432:5432'
+    expose:
+      # Opens port 5432 on the container
+      - '5432'
